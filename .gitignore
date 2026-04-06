@@ -1,0 +1,22 @@
+# Binaries
+nutriagent
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# Dependency directories
+vendor/
+
+# Environment variables
+.env
+
+# Testing
+*.test
+*.out
+
+# IDEs
+.idea/
+.vscode/

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Sardinha em Lata",
+    "portion": "100g",
+    "protein_g": 24.0,
+    "carb_g": 0.0,
+    "fat_g": 10.0,
+    "average_price": 5.50
+  },
+  {
+    "name": "Ovo em Pó",
+    "portion": "30g",
+    "protein_g": 14.0,
+    "carb_g": 1.0,
+    "fat_g": 11.0,
+    "average_price": 3.00
+  }
+]
