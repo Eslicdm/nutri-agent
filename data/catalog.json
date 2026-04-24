@@ -1,18 +1,54 @@
 [
   {
-    "name": "Sardinha em Lata",
-    "portion": "100g",
-    "protein_g": 24.0,
+    "name": "Sardinha Ralada em Lata",
+    "total_weight_g": 100.0,
+    "portion_g": 100.0,
     "carb_g": 0.0,
+    "protein_g": 24.0,
     "fat_g": 10.0,
-    "average_price": 5.50
+    "fiber_g": 0.0,
+    "calories": 186.0,
+    "average_price": 5.50,
+    "category": "protein",
+    "strength": "High Omega-3, calcium and B12, convenient, long shelf life, no prep needed"
   },
   {
     "name": "Ovo em Pó",
-    "portion": "30g",
-    "protein_g": 14.0,
+    "total_weight_g": 1000.0,
+    "portion_g": 30.0,
     "carb_g": 1.0,
+    "protein_g": 14.0,
     "fat_g": 11.0,
-    "average_price": 3.00
+    "fiber_g": 0.0,
+    "calories": 159.0,
+    "average_price": 3.00,
+    "category": "protein",
+    "strength": "Extremely portable, have a lot of vitamins and minerals, high bioavailability"
+  },
+  {
+    "name": "Hipercalórico Anabolic Mass 28500 - Profit",
+    "total_weight_g": 3000.0,
+    "portion_g": 150.0,
+    "carb_g": 125.0,
+    "protein_g": 20.0,
+    "fat_g": 0.0,
+    "fiber_g": 1.0,
+    "calories": 580,
+    "average_price": 75.0,
+    "category": "carbs",
+    "strength": "Fast digestion, enriched with vitamins, minerals and creatine, high calorie density"
+  },
+  {
+    "name": "Aveia em Flocos Finos - Nestlé",
+    "total_weight_g": 450.0,
+    "portion_g": 100.0,
+    "carb_g": 53.0,
+    "protein_g": 15.0,
+    "fat_g": 7.7,
+    "fiber_g": 11.0,
+    "calories": 363,
+    "average_price": 10.0,
+    "category": "carbs",
+    "strength": "Good digestion, have a lot of vitamins and minerals"
   }
 ]

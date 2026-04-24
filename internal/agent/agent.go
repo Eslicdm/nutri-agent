@@ -57,8 +57,8 @@ func GetAgent(catalog []nutrition.Product) (*NutriAgent, error) {
 	catalogStr := "Local Catalog:\n"
 	for _, p := range catalog {
 		catalogStr += fmt.Sprintf(
-			"- %s: %.1fg Protein, %.1fg Carbs, %.1fg Fat, Price: R$%.2f per %s\n",
-			p.Name, p.ProteinG, p.CarbG, p.FatG, p.AveragePrice, p.Portion,
+			"- %s (%s): %.0fkcal, P: %.1fg, C: %.1fg, F: %.1fg. Price: R$%.2f per %.1fg. Notes: %s\n",
+			p.Name, p.Category, p.Calories, p.ProteinG, p.CarbG, p.FatG, p.AveragePrice, p.PortionG, p.Strength,
 		)
 	}
 
@@ -66,11 +66,13 @@ func GetAgent(catalog []nutrition.Product) (*NutriAgent, error) {
 		Name:        "nutri_agent",
 		Model:       model,
 		Description: "Expert nutritionist that suggests cost-effective food alternatives.",
-		Instruction: "You are a cost-benefit focused nutritionist. " +
-			"Analyze the food item provided by the user (macros and price) " +
-			"and suggest the best alternative from the provided catalog. " +
-			"Compare them based on price per gram of protein/macros. " +
-			"Be concise and professional. Use the following catalog:\n" + catalogStr,
+		Instruction: "You are a cost-benefit focused nutritionist. Your task is to compare user-provided food with the catalog.\n" +
+			"CRITICAL LOGIC:\n" +
+			"1. Identify the primary macro based on the catalog category (protein, carbs, or fat).\n" +
+			"2. Calculate the 'Cost per Gram' of that primary macro (Price / Grams of Macro per portion) or 'Cost per 100kcal'.\n" +
+			"3. Factor in the 'Strength' notes (micros, digestion) for the final recommendation.\n" +
+			"4. Compare the user's input price/macros against the catalog's efficiency.\n" +
+			"Be concise and professional. Catalog:\n" + catalogStr,
 	})
 	if err != nil {
 		return nil, fmt.Errorf("failed to create agent: %w", err)

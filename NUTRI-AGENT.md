@@ -41,3 +41,29 @@ nutri-agent/
 ├── .env                           # Environment variables (API Keys)
 ├── go.mod
 └── go.sum
+```
+
+## 5. How to Run & Prompt
+
+### Setup
+1. **Environment Variables**: Create a `.env` file in the root directory with your credentials
+
+2. **Install Dependencies**:
+```bash
+go mod tidy
+```
+
+### Running the Project
+To start the interactive shell, run the following command from the root directory:
+```bash
+go run cmd/nutriagent/main.go init
+```
+
+### Prompting the Agent
+Once inside the `nutriagent>` shell, use the `compare` command followed by the food details (macros and price are optional but recommended for better analysis):
+
+* **By Price**: `compare peito de frango 1kg 30 reais`
+* **By Macros**: `compare dose de whey 30g com 24g de proteina custando 5 reais`
+* **Natural Language**: `compare 3 ovos cozidos no café da manhã`
+
+The agent will automatically calculate the efficiency (cost per gram of primary macro or cost per 100kcal) and suggest the best alternative from your local catalog.
